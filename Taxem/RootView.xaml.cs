@@ -1,9 +1,9 @@
-﻿using System.Windows.Controls;
-
-namespace Taxem
+﻿namespace Taxem
 {
+    using System.Windows.Controls;
+
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Partial...
     /// </summary>
     public partial class RootView : UserControl
     {

@@ -1,30 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Taxem
+﻿namespace Taxem
 {
-    class RootViewModel : Caliburn.Micro.Screen
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.IO;
+
+    public class RootViewModel : Caliburn.Micro.Screen
     {
-        private List<string> fills = new List<string>();
+        private IReadOnlyList<string> fills = new List<string>();
 
         public RootViewModel()
         {
-            var reader = new StreamReader(File.OpenRead(@"D:\Taxes\Crypto\fills.csv"));
-
             var lines = new List<string>();
-            while(!reader.EndOfStream)
+            using (var reader = new StreamReader(File.OpenRead(@"D:\Taxes\Crypto\fills.csv")))
             {
-                lines.Add(reader.ReadLine());
+                while (!reader.EndOfStream)
+                {
+                    lines.Add(reader.ReadLine());
+                }
             }
 
             fills = lines;
         }
 
-        public List<string> Fills
+        public IReadOnlyList<string> Fills
         {
             get => fills;
             set

@@ -1,0 +1,19 @@
+﻿[*.cs]
+
+# SA1600: Elements should be documented
+dotnet_diagnostic.SA1600.severity = suggestion
+
+# SA1101: Prefix local calls with this
+dotnet_diagnostic.SA1101.severity = none
+
+# SA1633: File should have header
+dotnet_diagnostic.SA1633.severity = none
+
+# IDE0065: Misplaced using directive
+csharp_using_directive_placement = inside_namespace:silent
+
+# IDE0008: Use explicit type
+csharp_style_var_when_type_is_apparent = true:silent
+
+# CA2000: Dispose objects before losing scope
+dotnet_diagnostic.CA2000.severity = error
