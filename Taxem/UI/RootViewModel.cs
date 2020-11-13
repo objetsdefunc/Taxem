@@ -1,15 +1,18 @@
 ﻿namespace Taxem
 {
    using System.Collections.Generic;
+   using System.Linq;
    using Caliburn.Micro;
 
    public class RootViewModel : Screen
    {
-      private IReadOnlyList<string> fills = new List<string>();
+      private IReadOnlyList<string> fills;
 
       public RootViewModel()
       {
-         fills = new CSVFile(@"D:\Taxes\Crypto\fills.csv").Transactions();
+         fills = new CSVTransactions(@"D:\Taxes\Crypto\fills.csv")
+            .Select(transaction => transaction.Text())
+            .ToList();
       }
 
       public IReadOnlyList<string> Fills

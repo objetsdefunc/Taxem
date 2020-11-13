@@ -41,6 +41,9 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DocumentationFile>bin\x64\Release\Taxem.xml</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <GenerateMSBuildEditorConfigFile>false</GenerateMSBuildEditorConfigFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -58,29 +61,29 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <ApplicationDefinition Include="UI\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CSVFile.cs" />
-    <Compile Include="Transaction.cs" />
-    <Compile Include="TransactionFile.cs" />
-    <Page Include="RootView.xaml">
+    <Compile Include="API\CSVTransactions.cs" />
+    <Compile Include="API\Transaction.cs" />
+    <Page Include="UI\RootView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
+    <Compile Include="API\Transactions.cs" />
+    <Compile Include="UI\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppBootStrapper.cs" />
-    <Compile Include="RootView.xaml.cs">
+    <Compile Include="UI\AppBootStrapper.cs" />
+    <Compile Include="UI\RootView.xaml.cs">
       <DependentUpon>RootView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RootViewModel.cs" />
+    <Compile Include="UI\RootViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -98,9 +101,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="..\.editorconfig">
-      <Link>.editorconfig</Link>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -108,7 +108,7 @@
     <AdditionalFiles Include="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="UI\App.config" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Caliburn.Micro">
