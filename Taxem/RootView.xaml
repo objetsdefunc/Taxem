@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Height="450" Width="800">
     <Grid Background="HotPink">
-        
+        <ListView x:Name="Fills"></ListView>
     </Grid>
 </UserControl>
