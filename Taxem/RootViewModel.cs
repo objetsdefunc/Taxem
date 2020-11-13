@@ -1,38 +1,28 @@
 ﻿namespace Taxem
 {
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.IO;
+   using System.Collections.Generic;
+   using Caliburn.Micro;
 
-    public class RootViewModel : Caliburn.Micro.Screen
-    {
-        private IReadOnlyList<string> fills = new List<string>();
+   public class RootViewModel : Screen
+   {
+      private IReadOnlyList<string> fills = new List<string>();
 
-        public RootViewModel()
-        {
-            var lines = new List<string>();
-            using (var reader = new StreamReader(File.OpenRead(@"D:\Taxes\Crypto\fills.csv")))
+      public RootViewModel()
+      {
+         fills = new CSVFile(@"D:\Taxes\Crypto\fills.csv").Transactions();
+      }
+
+      public IReadOnlyList<string> Fills
+      {
+         get => fills;
+         set
+         {
+            if (value != fills)
             {
-                while (!reader.EndOfStream)
-                {
-                    lines.Add(reader.ReadLine());
-                }
+               fills = value;
+               NotifyOfPropertyChange(() => Fills);
             }
-
-            fills = lines;
-        }
-
-        public IReadOnlyList<string> Fills
-        {
-            get => fills;
-            set
-            {
-                if (value != fills)
-                {
-                    fills = value;
-                    NotifyOfPropertyChange(() => Fills);
-                }
-            }
-        }
-    }
+         }
+      }
+   }
 }
