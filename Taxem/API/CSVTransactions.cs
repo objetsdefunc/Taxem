@@ -11,8 +11,7 @@
    {
       private readonly Lazy<List<Transaction>> transactions;
 
-      internal CSVTransactions(string path)
-      {
+      internal CSVTransactions(string path) =>
          transactions = new Lazy<List<Transaction>>(
             () =>
             {
@@ -30,7 +29,6 @@
                   return transactions.Skip(1).ToList();
                }
             });
-      }
 
       public int Count => transactions.Value.Count;
 

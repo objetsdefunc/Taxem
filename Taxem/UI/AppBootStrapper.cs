@@ -1,12 +1,13 @@
 ﻿namespace Taxem
 {
-    using System.Windows;
-    using Caliburn.Micro;
+   using System.Windows;
 
-    public class AppBootStrapper : BootstrapperBase
-    {
-        public AppBootStrapper() => Initialize();
+   using Caliburn.Micro;
 
-        protected override void OnStartup(object sender, StartupEventArgs e) => DisplayRootViewFor<RootViewModel>();
-    }
+   public class AppBootStrapper : BootstrapperBase
+   {
+      public AppBootStrapper() => Initialize();
+
+      protected override void OnStartup(object sender, StartupEventArgs e) => DisplayRootViewFor<RootViewModel>();
+   }
 }

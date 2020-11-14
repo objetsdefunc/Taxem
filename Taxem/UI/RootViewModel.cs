@@ -8,12 +8,10 @@
    {
       private IReadOnlyList<string> fills;
 
-      public RootViewModel()
-      {
+      public RootViewModel() =>
          fills = new CSVTransactions(@"D:\Taxes\Crypto\fills.csv")
             .Select(transaction => transaction.Text())
             .ToList();
-      }
 
       public IReadOnlyList<string> Fills
       {

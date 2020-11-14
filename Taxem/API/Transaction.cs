@@ -2,7 +2,7 @@
 {
    internal sealed class Transaction
    {
-      private string line;
+      private readonly string line;
 
       public Transaction(string line) => this.line = line;
 
