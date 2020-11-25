@@ -1,6 +1,6 @@
 ﻿namespace Taxem
 {
-   internal sealed class Transaction
+   public sealed class Transaction
    {
       private readonly string line;
 

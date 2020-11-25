@@ -67,6 +67,14 @@
     </ApplicationDefinition>
     <Compile Include="API\CSVTransactions.cs" />
     <Compile Include="API\Transaction.cs" />
+    <Compile Include="UI\TransactionView.cs">
+      <DependentUpon>TransactionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TransactionViewModel.cs" />
+    <Page Include="UI\TransactionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UI\RootView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

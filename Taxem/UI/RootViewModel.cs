@@ -6,14 +6,14 @@
 
    public class RootViewModel : Screen
    {
-      private IReadOnlyList<string> fills;
+      private IReadOnlyList<TransactionViewModel> fills;
 
       public RootViewModel() =>
          fills = new CSVTransactions(@"D:\Taxes\Crypto\fills.csv")
-            .Select(transaction => transaction.Text())
+            .Select(transaction => new TransactionViewModel(transaction))
             .ToList();
 
-      public IReadOnlyList<string> Fills
+      public IReadOnlyList<TransactionViewModel> Fills
       {
          get => fills;
          set
