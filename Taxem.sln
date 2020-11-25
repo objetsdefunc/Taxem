@@ -10,16 +10,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taxem.Checks", "Taxem.Checks\Taxem.Checks.csproj", "{DCD7D5F1-A052-4F12-909E-339FDC9A245A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{321114D5-6DA1-4427-8BD8-5F8A450914C6}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{321114D5-6DA1-4427-8BD8-5F8A450914C6}.Debug|x64.ActiveCfg = Debug|x64
 		{321114D5-6DA1-4427-8BD8-5F8A450914C6}.Debug|x64.Build.0 = Debug|x64
+		{321114D5-6DA1-4427-8BD8-5F8A450914C6}.Release|Any CPU.ActiveCfg = Release|x64
 		{321114D5-6DA1-4427-8BD8-5F8A450914C6}.Release|x64.ActiveCfg = Release|x64
 		{321114D5-6DA1-4427-8BD8-5F8A450914C6}.Release|x64.Build.0 = Release|x64
+		{DCD7D5F1-A052-4F12-909E-339FDC9A245A}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{DCD7D5F1-A052-4F12-909E-339FDC9A245A}.Debug|x64.ActiveCfg = Debug|x64
+		{DCD7D5F1-A052-4F12-909E-339FDC9A245A}.Release|Any CPU.ActiveCfg = Release|x64
+		{DCD7D5F1-A052-4F12-909E-339FDC9A245A}.Release|x64.ActiveCfg = Release|x64
+		{DCD7D5F1-A052-4F12-909E-339FDC9A245A}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

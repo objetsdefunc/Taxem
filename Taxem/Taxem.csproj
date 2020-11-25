@@ -65,6 +65,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="API\CSV.cs" />
     <Compile Include="API\CSVTransactions.cs" />
     <Compile Include="API\Transaction.cs" />
     <Compile Include="UI\TransactionView.cs">

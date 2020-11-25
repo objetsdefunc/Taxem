@@ -18,7 +18,7 @@ insert_final_newline = false
 #### .NET Coding Conventions ####
 
 # Organize usings
-dotnet_separate_import_directive_groups = fals
+dotnet_separate_import_directive_groups = false
 dotnet_sort_system_directives_first = true
 file_header_template = unset
 
@@ -48,7 +48,7 @@ dotnet_style_explicit_tuple_names = true:warning
 dotnet_style_null_propagation = true:warning
 dotnet_style_object_initializer = true:warning
 dotnet_style_operator_placement_when_wrapping = beginning_of_line
-dotnet_style_prefer_auto_properties = true:warning
+dotnet_style_prefer_auto_properties = false:warning
 dotnet_style_prefer_compound_assignment = true:warning
 dotnet_style_prefer_conditional_expression_over_assignment = true:warning
 dotnet_style_prefer_conditional_expression_over_return = true:warning
@@ -111,7 +111,7 @@ csharp_style_prefer_index_operator = true:warning
 csharp_style_prefer_range_operator = true:warning
 csharp_style_throw_expression = true:warning
 csharp_style_unused_value_assignment_preference = discard_variable:warning
-csharp_style_unused_value_expression_statement_preference = discard_variable:warning
+csharp_style_unused_value_expression_statement_preference = discard_variable:none
 
 # 'using' directive preferences
 csharp_using_directive_placement = inside_namespace:warning
@@ -217,3 +217,18 @@ dotnet_diagnostic.CS1591.severity = none
 
 # SA1302: Interface names should begin with I
 dotnet_diagnostic.SA1302.severity = none
+
+# IDE0058: Expression value is never used
+dotnet_diagnostic.IDE0058.severity = none
+
+# IDE1006: Naming Styles
+dotnet_diagnostic.IDE1006.severity = none
+
+# SA1217: Using static directives should be ordered alphabetically
+dotnet_diagnostic.SA1217.severity = none
+
+# SA1300: Element should begin with upper-case letter
+dotnet_diagnostic.SA1300.severity = none
+
+# SA1600: Elements should be documented
+dotnet_diagnostic.SA1600.severity = none
