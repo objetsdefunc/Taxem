@@ -1,15 +1,5 @@
-# Remove the line below if you want to inherit .editorconfig settings from higher directories
-root = true
-
 # C# files
 [*.cs]
-
-
-# Default severity for analyzer diagnostics with category 'StyleCop.CSharp.ReadabilityRules'
-dotnet_analyzer_diagnostic.category-StyleCop.CSharp.ReadabilityRules.severity = none
-
-# Default severity for analyzer diagnostics with category 'StyleCop.CSharp.DocumentationRules'
-dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = none
 
 # IDE0065: Misplaced using directive
 dotnet_diagnostic.IDE0065.severity = none
@@ -22,3 +12,12 @@ dotnet_diagnostic.SA1302.severity = none
 
 # IDE0065: Misplaced using directive
 csharp_using_directive_placement = inside_namespace:error
+
+# CA2000: Dispose objects before losing scope
+dotnet_diagnostic.CA2000.severity = warning
+
+# CA2213: Disposable fields should be disposed
+dotnet_diagnostic.CA2213.severity = warning
+
+# SA1633: File should have header
+dotnet_diagnostic.SA1633.severity = none

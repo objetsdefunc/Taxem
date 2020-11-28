@@ -11,12 +11,13 @@
       [Fact]
       public void all_its_column_headers()
       {
-         using (var text = new StringReader(ValidTransactions))
-         {
-            new CSVTable(text)
-               .Header()
-               .Columns().HasCount(11);
-         }
+         using var text = new StringReader(ValidTransactions);
+         using var table = new CSVTable(text);
+         var columns = table.Header().Result.Columns();
+
+         columns.HasCount(11);
+         columns[0].Is("portfolio");
+         columns[9].Is("total");
       }
    }
 }

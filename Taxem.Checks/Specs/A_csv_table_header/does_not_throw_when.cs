@@ -11,12 +11,11 @@
       [Fact]
       public void it_is_valid_csv()
       {
-         using (var text = new StringReader(ValidTransactions))
-         {
-            var document = new CSVTable(text);
-            Calling(() => document.Header())
-               .DoesNotThrow();
-         }
+         using var text = new StringReader(ValidTransactions);
+         using var table = new CSVTable(text);
+
+         Calling(() => table.Header())
+            .DoesNotThrow();
       }
    }
 }
