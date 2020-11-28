@@ -2,6 +2,7 @@
 {
    using System;
    using FluentAssertions;
+   using static FluentAssertions.FluentActions;
 
    public sealed class Call
    {
@@ -15,6 +16,9 @@
 
       internal void ThrowsWithMessage<T>(string message)
          where T : Exception =>
-            FluentActions.Invoking(call).Should().ThrowExactly<T>().WithMessage(message);
+            Invoking(call).Should().ThrowExactly<T>().WithMessage(message);
+
+      internal void DoesNotThrow() =>
+         Invoking(call).Should().NotThrow();
    }
 }
