@@ -4,11 +4,11 @@
    using FluentAssertions;
    using static FluentAssertions.FluentActions;
 
-   public sealed class Call
+   public sealed class AssertableCall
    {
       private readonly Action call;
 
-      public Call(Action call) => this.call = call;
+      public AssertableCall(Action call) => this.call = call;
 
       internal CallThrowing<T> Throws<T>()
          where T : Exception

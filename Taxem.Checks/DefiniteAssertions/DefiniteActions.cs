@@ -4,6 +4,6 @@
 
    public static class DefiniteActions
    {
-      public static Call Calling(Action call) => new Call(call);
+      public static AssertableCall Calling(Action call) => new AssertableCall(call);
    }
 }

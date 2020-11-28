@@ -5,9 +5,9 @@
    public class CallThrowing<T>
       where T : Exception
    {
-      private readonly Call call;
+      private readonly AssertableCall call;
 
-      internal CallThrowing(Call call) => this.call = call;
+      internal CallThrowing(AssertableCall call) => this.call = call;
 
       internal void WithMessage(string message) => call.ThrowsWithMessage<T>(message);
    }

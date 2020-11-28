@@ -20,14 +20,5 @@ dotnet_diagnostic.SA1101.severity = none
 # SA1302: Interface names should begin with I
 dotnet_diagnostic.SA1302.severity = none
 
-# CA1707: Identifiers should not contain underscores
-dotnet_diagnostic.CA1707.severity = none
-
-# CA1806: Do not ignore method results
-dotnet_diagnostic.CA1806.severity = none
-
-# IDE1006: Naming Styles
-dotnet_diagnostic.IDE1006.severity = none
-
-# SA1300: Element should begin with upper-case letter
-dotnet_diagnostic.SA1300.severity = none
+# IDE0065: Misplaced using directive
+csharp_using_directive_placement = inside_namespace:error
