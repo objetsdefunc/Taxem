@@ -12,7 +12,7 @@
       public void all_its_column_headers()
       {
          using var text = new StringReader(ValidTransactions);
-         using var table = new CSVTable(text);
+         using var table = CSV.Table(text);
          var columns = table.Header().Result.Columns();
 
          columns.HasCount(11);

@@ -1,6 +1,7 @@
 ﻿namespace A_csv_table_header
 {
    using System.IO;
+   using DefiniteAssertions;
    using Taxem;
    using Xunit;
    using static DefiniteAssertions.DefiniteActions;
@@ -12,7 +13,7 @@
       public void it_is_valid_csv()
       {
          using var text = new StringReader(ValidTransactions);
-         using var table = new CSVTable(text);
+         using var table = CSV.Table(text);
 
          Calling(() => table.Header())
             .DoesNotThrow();

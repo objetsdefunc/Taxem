@@ -14,7 +14,7 @@
       public void all_its_rows()
       {
          using var text = new StringReader(ValidTransactions);
-         using var table = new CSVTable(text);
+         using var table = CSV.Table(text);
 
          table.Rows().ToEnumerable().HasCount(4);
       }
@@ -23,7 +23,7 @@
       public void all_its_rows_each_time()
       {
          using var text = new StringReader(ValidTransactions);
-         using var table = new CSVTable(text);
+         using var table = CSV.Table(text);
          var forcedEnumeration = table.Rows().ToEnumerable().Count();
 
          table.Rows().ToEnumerable().HasCount(4);

@@ -20,6 +20,11 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="P:Taxem.Checks.Properties.Resources.Empty">
+            <summary>
+              Looks up a localized string similar to .
+            </summary>
+        </member>
         <member name="P:Taxem.Checks.Properties.Resources.HeaderContainsConsecutiveCommas">
              <summary>
                Looks up a localized string similar to portfolio,trade id,product, ,created at,size,size unit,price,fee,total,price/fee/total unit
