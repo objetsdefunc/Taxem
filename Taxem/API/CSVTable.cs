@@ -1,12 +1,11 @@
 ﻿namespace Taxem
 {
    using System;
-   using System.Threading.Tasks;
 
    public interface CSVTable : IDisposable
    {
-      Task<Header> Header();
+      Future<Header> Header();
 
-      IObservable<string> Rows();
+      IObservable<Row> Rows();
    }
 }

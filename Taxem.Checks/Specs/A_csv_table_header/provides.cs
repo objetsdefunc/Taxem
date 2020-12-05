@@ -9,11 +9,14 @@
    public class provides
    {
       [Fact]
-      public void all_its_column_headers()
+      public async void all_its_column_headers()
       {
          using var text = new StringReader(ValidTransactions);
          using var table = CSV.Table(text);
-         var columns = table.Header().Result.Columns();
+
+         var foo = await table.Header();
+
+         var columns = foo.Columns();
 
          columns.HasCount(11);
          columns[0].Is("portfolio");

@@ -2,7 +2,6 @@
 {
    using System;
    using System.IO;
-   using System.Threading.Tasks;
 
    internal sealed class CSVTableFromFile : CSVTable, IDisposable
    {
@@ -17,9 +16,9 @@
          text = new CSVTableFromText(file);
       }
 
-      public Task<Header> Header() => text.Header();
+      public Future<Header> Header() => text.Header();
 
-      public IObservable<string> Rows() => text.Rows();
+      public IObservable<Row> Rows() => text.Rows();
 
       public void Dispose()
       {

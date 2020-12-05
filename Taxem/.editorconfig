@@ -24,3 +24,9 @@ dotnet_diagnostic.SA1633.severity = none
 
 # IDE0005: Using directive is unnecessary.
 dotnet_diagnostic.IDE0005.severity = warning
+
+# IDE0008: Use explicit type
+dotnet_diagnostic.IDE0008.severity = none
+
+# Default severity for analyzer diagnostics with category 'StyleCop.CSharp.DocumentationRules'
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = none
