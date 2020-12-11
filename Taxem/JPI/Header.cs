@@ -1,4 +1,4 @@
-﻿namespace Taxem
+﻿namespace JPI
 {
    using System.Collections.Generic;
    using System.IO;

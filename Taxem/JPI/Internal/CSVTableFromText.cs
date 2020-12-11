@@ -1,4 +1,4 @@
-﻿namespace Taxem
+﻿namespace JPI
 {
    using System;
    using System.IO;
@@ -6,27 +6,27 @@
 
    internal sealed class CSVTableFromText : CSVTable, IDisposable
    {
-      private readonly TextReader reader;
+      private readonly IDisposable<TextReader> reader;
       private readonly Future<Header> header;
       private readonly IObservable<Row> rows;
       private readonly IDisposable readerLifetime;
       private readonly Lazy<IDisposable> connection;
 
-      internal CSVTableFromText(TextReader text)
+      internal CSVTableFromText(IDisposing<TextReader> text)
       {
-         reader = text ?? throw new ArgumentNullException(nameof(text));
+         reader = text.UseAsIDisposable();
 
          // All subscriptions will get all values.
          // Reading won't begin until a connection is established.
          var lines = Observable.Generate(
-            text.ReadLine(),
+            string.Empty,
             line => line != null,
-            _ => text.ReadLine(),
+            _ => reader.Value.ReadLine(),
             line => line)
                .Replay();
 
          header = lines.FirstAsync().Select(row => new Header(row)).ToFuture();
-         rows = lines.Select(line => new Row(line));
+         rows = lines.Skip(2).Select(line => new Row(line));
 
          // Reader will be disposed as soon as all the lines have been read, or on error.
          readerLifetime = lines.LastAsync().Subscribe(

@@ -1,10 +1,10 @@
-﻿namespace Taxem
+﻿namespace JPI
 {
    using System;
    using System.Reactive.Linq;
    using System.Runtime.CompilerServices;
 
-   public sealed class Future<T> : INotifyCompletion
+   public sealed class Future<T> : ICriticalNotifyCompletion
    {
       private readonly IObservable<T> observable;
       private readonly IDisposable subscription;
@@ -46,5 +46,7 @@
 
          continuation();
       }
+
+      public void UnsafeOnCompleted(Action continuation) => throw new NotImplementedException();
    }
 }

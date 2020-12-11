@@ -96,6 +96,19 @@ namespace Taxem.Checks.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to portfolio,trade id,product,side,created at,size,size unit,price,fee,total,price/fee/total unit
+        ///default,12345,BAT-ETH,BUY,2019-10-16T20:03:05.219Z,123.00000000,BAT,0.00127110,0.001754118,-0.352577718,ETH
+        ///default,22222,BAT-ETH,BUY,2019-10-16T23:31:03.304Z,2.00000000,BAT,0.00123500,0.00025935,-0.05212935,ETH
+        ///default,30000,BAT-ETH,BUY,2019-10-17T04:01:24.219Z,300.00000000,BAT,0.00123500,0.00159315,-0.32022315,ETH
+        ///.
+        /// </summary>
+        internal static string ThreeValidTransactions {
+            get {
+                return ResourceManager.GetString("FourValidTransactions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to portfolio,trade id,product, ,created at,size,size unit,price,fee,total,price/fee/total unit
         ///default,12345,BAT-ETH,BUY,2019-10-16T20:03:05.219Z,123.00000000,BAT,0.00127110,0.001754118,-0.352577718,ETH
         ///default,22222,BAT-ETH,BUY,2019-10-16T23:31:03.304Z,2.00000000,BAT,0.00123500,0.00025935,-0.05212935,ETH
@@ -119,19 +132,6 @@ namespace Taxem.Checks.Properties {
         internal static string HeaderContainsNoCommas {
             get {
                 return ResourceManager.GetString("HeaderContainsNoCommas", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to portfolio,trade id,product,side,created at,size,size unit,price,fee,total,price/fee/total unit
-        ///default,12345,BAT-ETH,BUY,2019-10-16T20:03:05.219Z,123.00000000,BAT,0.00127110,0.001754118,-0.352577718,ETH
-        ///default,22222,BAT-ETH,BUY,2019-10-16T23:31:03.304Z,2.00000000,BAT,0.00123500,0.00025935,-0.05212935,ETH
-        ///default,30000,BAT-ETH,BUY,2019-10-17T04:01:24.219Z,300.00000000,BAT,0.00123500,0.00159315,-0.32022315,ETH
-        ///.
-        /// </summary>
-        internal static string ValidTransactions {
-            get {
-                return ResourceManager.GetString("ValidTransactions", resourceCulture);
             }
         }
     }

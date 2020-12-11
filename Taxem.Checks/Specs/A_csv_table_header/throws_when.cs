@@ -2,7 +2,7 @@
 {
    using System.IO;
    using DefiniteAssertions;
-   using Taxem;
+   using JPI;
    using static DefiniteAssertions.DefiniteActions;
    using static Taxem.Checks.Properties.Resources;
 
@@ -10,8 +10,7 @@
    {
       public void it_is_empty()
       {
-         using var text = new StringReader(Empty);
-         using var table = CSV.Table(text);
+         var table = CSV.Table(Disposable.Of(() => new StringReader(Empty)));
 
          Calling(() => table.Header().Result())
             .Throws<InvalidDataException>()
@@ -20,8 +19,7 @@
 
       public void it_contains_no_commas()
       {
-         using var text = new StringReader(HeaderContainsNoCommas);
-         using var table = CSV.Table(text);
+         var table = CSV.Table(Disposable.Of(() => new StringReader(HeaderContainsNoCommas)));
 
          Calling(() => _ = table.Header().Result())
             .Throws<InvalidDataException>()
@@ -30,8 +28,7 @@
 
       public void it_contains_consecutive_commas()
       {
-         using var text = new StringReader(HeaderContainsConsecutiveCommas);
-         using var table = CSV.Table(text);
+         var table = CSV.Table(Disposable.Of(() => new StringReader(HeaderContainsConsecutiveCommas)));
 
          Calling(() => _ = table.Header().Result())
             .Throws<InvalidDataException>()

@@ -2,7 +2,7 @@
 {
    using System.IO;
    using DefiniteAssertions;
-   using Taxem;
+   using JPI;
    using Xunit;
    using static DefiniteAssertions.DefiniteActions;
    using static Taxem.Checks.Properties.Resources;
@@ -12,8 +12,7 @@
       [Fact]
       public void it_is_valid_csv()
       {
-         using var text = new StringReader(ValidTransactions);
-         using var table = CSV.Table(text);
+         var table = CSV.Table(Disposable.Of(() => new StringReader(ThreeValidTransactions)));
 
          Calling(() => table.Header())
             .DoesNotThrow();

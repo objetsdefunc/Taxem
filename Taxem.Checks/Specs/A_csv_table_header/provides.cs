@@ -2,7 +2,7 @@
 {
    using System.IO;
    using DefiniteAssertions;
-   using Taxem;
+   using JPI;
    using Xunit;
    using static Taxem.Checks.Properties.Resources;
 
@@ -11,8 +11,7 @@
       [Fact]
       public async void all_its_column_headers()
       {
-         using var text = new StringReader(ValidTransactions);
-         using var table = CSV.Table(text);
+         var table = CSV.Table(Disposable.Of(() => new StringReader(ThreeValidTransactions)));
 
          var foo = await table.Header();
 
