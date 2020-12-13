@@ -2,12 +2,7 @@
 {
    using Caliburn.Micro;
 
-   public class TransactionViewModel : Screen
+   public abstract class TransactionViewModel : Screen
    {
-      private readonly Transaction transaction;
-
-      public TransactionViewModel(Transaction transaction) => this.transaction = transaction;
-
-      public string Text => transaction.Text();
    }
 }

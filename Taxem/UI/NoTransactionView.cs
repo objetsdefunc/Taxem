@@ -5,8 +5,8 @@
    /// <summary>
    /// Partial...
    /// </summary>
-   public partial class TransactionView : UserControl
+   public partial class NoTransactionView : UserControl
    {
-      public TransactionView() => InitializeComponent();
+      public NoTransactionView() => InitializeComponent();
    }
 }

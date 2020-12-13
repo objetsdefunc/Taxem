@@ -6,7 +6,7 @@
    {
       public static TValue EnsuredBeforeReturning<TValue, TLazy>(this Lazy<TLazy> lazy, TValue value)
       {
-         _ = lazy.Value;
+         _ = lazy.NotNull().Value;
          return value;
       }
    }

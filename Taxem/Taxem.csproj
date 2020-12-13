@@ -67,6 +67,7 @@
     </ApplicationDefinition>
     <Compile Include="JPI\Disposable.cs" />
     <Compile Include="JPI\CSV.cs" />
+    <Compile Include="JPI\NotNullExtensions.cs" />
     <Compile Include="JPI\FilePath.cs" />
     <Compile Include="JPI\Internal\CovariantLazy.cs" />
     <Compile Include="JPI\Internal\Disposable.cs" />
@@ -90,15 +91,24 @@
     <Compile Include="JPI\Row.cs" />
     <Compile Include="JPI\IObservableExtensions.cs" />
     <Compile Include="JPI\LazyExtensions.cs" />
-    <Compile Include="UI\TransactionView.cs">
-      <DependentUpon>TransactionView.xaml</DependentUpon>
+    <Compile Include="UI\NoTransactionView.cs">
+      <DependentUpon>NoTransactionView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\NoTransactionViewModel.cs" />
     <Compile Include="UI\TransactionViewModel.cs" />
+    <Compile Include="UI\LoadedTransactionView.cs">
+      <DependentUpon>LoadedTransactionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoadedTransactionViewModel.cs" />
     <Page Include="UI\AppResources.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UI\TransactionView.xaml">
+    <Page Include="UI\NoTransactionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\LoadedTransactionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
