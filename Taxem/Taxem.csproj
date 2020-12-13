@@ -65,22 +65,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="JPI\Disposable.cs" />
+    <Compile Include="JPI\API\Not Null\NotNullExtensions.cs" />
+    <Compile Include="JPI\API\Auto Disposing\Disposable.cs" />
     <Compile Include="JPI\CSV.cs" />
-    <Compile Include="JPI\NotNullExtensions.cs" />
-    <Compile Include="JPI\FilePath.cs" />
+    <Compile Include="JPI\API\System Extensions\ClassExtensions.cs" />
+    <Compile Include="JPI\API\Files\FilePath.cs" />
     <Compile Include="JPI\Internal\CovariantLazy.cs" />
     <Compile Include="JPI\Internal\Disposable.cs" />
     <Compile Include="JPI\Internal\DisposableValue.cs" />
     <Compile Include="JPI\Internal\IDisposable.cs" />
     <Compile Include="JPI\Internal\IDisposing.cs" />
     <Compile Include="JPI\Internal\ILazy.cs" />
-    <Compile Include="JPI\DisposableExtensions.cs" />
-    <Compile Include="JPI\Text.cs" />
+    <Compile Include="JPI\API\Auto Disposing\IDisposableExtensions.cs" />
+    <Compile Include="JPI\API\Text\Text.cs" />
     <Compile Include="API\TransactionSequence.cs" />
     <Compile Include="JPI\CSVTable.cs" />
-    <Compile Include="JPI\Future{T}.cs" />
-    <Compile Include="JPI\a.cs" />
+    <Compile Include="JPI\API\Future\Future{T}.cs" />
+    <Compile Include="JPI\API\Not Null\a.cs" />
     <Compile Include="API\TransactionsFromFile.cs" />
     <Compile Include="API\TransactionsFromText.cs" />
     <Compile Include="JPI\Internal\CSVTableFromFile.cs" />
@@ -89,26 +90,26 @@
     <Compile Include="JPI\Header.cs" />
     <Compile Include="API\Transaction.cs" />
     <Compile Include="JPI\Row.cs" />
-    <Compile Include="JPI\IObservableExtensions.cs" />
-    <Compile Include="JPI\LazyExtensions.cs" />
-    <Compile Include="UI\NoTransactionView.cs">
+    <Compile Include="JPI\API\Future\IObservableExtensions.cs" />
+    <Compile Include="JPI\API\System Extensions\LazyExtensions.cs" />
+    <Compile Include="UI\Transactions\NoTransactionView.cs">
       <DependentUpon>NoTransactionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\NoTransactionViewModel.cs" />
-    <Compile Include="UI\TransactionViewModel.cs" />
-    <Compile Include="UI\LoadedTransactionView.cs">
+    <Compile Include="UI\Transactions\NoTransactionViewModel.cs" />
+    <Compile Include="UI\Transactions\TransactionViewModel.cs" />
+    <Compile Include="UI\Transactions\LoadedTransactionView.cs">
       <DependentUpon>LoadedTransactionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\LoadedTransactionViewModel.cs" />
+    <Compile Include="UI\Transactions\LoadedTransactionViewModel.cs" />
     <Page Include="UI\AppResources.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UI\NoTransactionView.xaml">
+    <Page Include="UI\Transactions\NoTransactionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UI\LoadedTransactionView.xaml">
+    <Page Include="UI\Transactions\LoadedTransactionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

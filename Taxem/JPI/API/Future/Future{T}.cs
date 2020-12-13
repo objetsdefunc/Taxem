@@ -9,7 +9,7 @@
       private readonly IObservable<T> observable;
       private readonly IDisposable subscription;
 
-      internal Future(IObservable<T> observable)
+      public Future(IObservable<T> observable)
       {
          this.observable = observable.SingleAsync();
 

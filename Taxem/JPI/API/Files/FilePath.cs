@@ -11,8 +11,6 @@
 
       public Text Path { get; }
 
-#pragma warning disable CA1062 // Validate arguments of public methods
-      public static FilePath ThatExists(Text path) => new FilePath(path);
-#pragma warning restore CA1062 // Validate arguments of public methods
+      public static FilePath ThatExists(a<Text> path) => new FilePath(path.NotNull);
    }
 }
