@@ -6,22 +6,22 @@
 
    public class RootViewModel : Screen
    {
-      private IReadOnlyList<TransactionViewModel> fills;
+      private IReadOnlyList<TransactionViewModel> transactions;
 
       public RootViewModel() =>
-         fills = new CSVTransactions(@"D:\Taxes\Crypto\fills.csv")
+         transactions = new CSVTransactions(@"D:\Taxes\Crypto\fills.csv")
             .Select(transaction => new TransactionViewModel(transaction))
             .ToList();
 
-      public IReadOnlyList<TransactionViewModel> Fills
+      public IReadOnlyList<TransactionViewModel> Transactions
       {
-         get => fills;
+         get => transactions;
          set
          {
-            if (value != fills)
+            if (value != transactions)
             {
-               fills = value;
-               NotifyOfPropertyChange(() => Fills);
+               transactions = value;
+               NotifyOfPropertyChange(() => Transactions);
             }
          }
       }

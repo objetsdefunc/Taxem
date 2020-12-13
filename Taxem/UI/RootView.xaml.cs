@@ -1,11 +1,11 @@
 ﻿namespace Taxem
 {
-   using System.Windows.Controls;
+   using System.Windows;
 
    /// <summary>
    /// Partial...
    /// </summary>
-   public partial class RootView : UserControl
+   public partial class RootView : Window
    {
       public RootView() => InitializeComponent();
    }

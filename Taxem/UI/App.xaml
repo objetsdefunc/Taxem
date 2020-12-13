@@ -9,6 +9,7 @@
                 <ResourceDictionary>
                     <local:AppBootStrapper x:Key="bootstrapper" />
                 </ResourceDictionary>
+                <ResourceDictionary Source="AppResources.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
